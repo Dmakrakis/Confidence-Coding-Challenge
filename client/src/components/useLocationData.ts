@@ -14,12 +14,17 @@ export default function useLocationData(
   const hasMoreElements: boolean = startPagingIndex < numOfLocations;
 
   useEffect(() => {
-    if (startPagingIndex <= numOfLocations) {
+    if (startPagingIndex < numOfLocations) {
       setIsFetching(true);
       fetchData();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [startPagingIndex]);
+
+  useEffect(() => {
+    fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const fetchData = () => {
     axios
