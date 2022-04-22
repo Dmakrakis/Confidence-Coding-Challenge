@@ -14,7 +14,7 @@ export default function useLocationData(
   const hasMoreElements: boolean = startPagingIndex < numOfLocations;
 
   useEffect(() => {
-    if (startPagingIndex < numOfLocations) {
+    if (hasMoreElements) {
       setIsFetching(true);
       fetchData();
     }
