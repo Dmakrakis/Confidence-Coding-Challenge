@@ -10,7 +10,6 @@ export default function useLocationData(
   const [isFetching, setIsFetching] = useState<boolean>(true);
   const [locationData, setLocationData] = useState<Data[]>([]);
   const [numOfLocations, setNumOfLocations] = useState<number>(0);
-
   const hasMoreElements: boolean = startPagingIndex < numOfLocations;
 
   useEffect(() => {
