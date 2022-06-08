@@ -1,5 +1,6 @@
 # Confidence-Coding-Challenge
-React+Typescript
+
+A coding exercise on React+TypeScript that fetches and displays location data using an infinite scroll technique
 
 **CLIENT**
 
